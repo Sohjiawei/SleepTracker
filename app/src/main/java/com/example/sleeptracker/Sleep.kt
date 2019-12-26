@@ -9,5 +9,5 @@ class Sleep(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val startDate: Date,
     val endDate: String,
-    val quantity: Int
+    val quantity: Int //0 to 5
 )
