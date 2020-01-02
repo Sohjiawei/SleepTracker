@@ -28,6 +28,11 @@ class SleepAdapter internal constructor(context: Context):RecyclerView.Adapter<S
         val sleepRec: Sleep = sleeps.get(position)
         holder.textViewQualityValue.text = sleepRec.quality.toString()
 
-        holder.textViewStart.text = Simple
+        holder.textViewStart.text = SimpleDataformat("yy/mm/dd,HH:MM").format(sleepRec.startDate)
+        holder.textViewEnd.text= SimpleDataformat("yy/mm/dd,HH:MM").format(sleepRec.endDate)
+    }
+
+    override fun getItemCount():Int{
+        return sleep.size
     }
 }

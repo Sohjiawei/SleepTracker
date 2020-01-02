@@ -7,7 +7,7 @@ import java.util.*
 @Entity(tableName = "sleep")
 class Sleep(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    val startDate: Date,
+    val startDate: Long = System.currentTimeMillis(),
     val endDate: String,
     val quantity: Int //0 to 5
 )
